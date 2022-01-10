@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { Achievement } from './achievement.entity';
-import { Challenge } from './challenge.entity';
+import { Achievement } from './entity/Achievement';
+import { Challenge } from './entity/Challenge';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Achievement, Challenge], 'challenge')],

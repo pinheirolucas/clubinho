@@ -7,6 +7,8 @@ import { ChallengeModule } from './challenge/challenge.module';
 import challengeDatabaseConfig, {
   ChallengeDatabaseConfig,
 } from './challenge/config/database';
+import { Achievement } from './challenge/entity/Achievement';
+import { Challenge } from './challenge/entity/Challenge';
 import configuration from './configuration';
 import { ShoppingModule } from './shopping/shopping.module';
 
@@ -29,7 +31,7 @@ import { ShoppingModule } from './shopping/shopping.module';
         return {
           type: challengeDatabaseConfig?.type,
           url: challengeDatabaseConfig?.url,
-          entities: ['dist/**/*.entity{.ts,.js}'],
+          entities: [Challenge, Achievement],
         };
       },
     }),

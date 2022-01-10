@@ -7,7 +7,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-import { Challenge } from './challenge.entity';
+import { Challenge } from './Challenge';
 
 @Entity('achievement')
 export class Achievement {
