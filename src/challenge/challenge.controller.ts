@@ -16,7 +16,7 @@ import { CreateChallengeDto } from './dto/create-challenge.input';
 export class ChallengeController {
   @Post()
   create(@Body() createChallengeDto: CreateChallengeDto) {
-    // return
+    return 'OK';
   }
 
   @Get(':id')

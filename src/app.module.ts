@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { AuthModule } from './auth/auth.module';
 import { BankModule } from './bank/bank.module';
 import { ChallengeModule } from './challenge/challenge.module';
 import challengeDatabaseConfig, {
@@ -14,6 +15,7 @@ import { ShoppingModule } from './shopping/shopping.module';
 
 @Module({
   imports: [
+    AuthModule,
     BankModule,
     ChallengeModule,
     ShoppingModule,
